@@ -23,6 +23,25 @@ def train_cli() -> None:
         cwd=str(paths.root),
     )
 
+    subprocess.check_call(
+        [
+            "python",
+            "scripts/feature_engineering.py",
+            "--clean_train",
+            str(paths.data_dir / "clean_train.parquet"),
+            "--clean_test",
+            str(paths.data_dir / "clean_test.parquet"),
+            "--out_train",
+            str(paths.data_dir / "features_train.parquet"),
+            "--out_test",
+            str(paths.data_dir / "features_test.parquet"),
+        ],
+        cwd=str(paths.root),
+    )
+
+    print("Features stage completed (next: train models)")
+
+
     print("Preprocess stage completed (next: features -> train)")
 
 
