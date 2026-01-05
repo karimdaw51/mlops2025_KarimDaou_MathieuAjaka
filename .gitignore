@@ -35,3 +35,8 @@ artifacts/
 # OS
 .DS_Store
 
+
+# local installers
+aws/
+awscliv2.zip
+touch/

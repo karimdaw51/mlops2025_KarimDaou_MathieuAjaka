@@ -46,5 +46,5 @@ def train_cli() -> None:
 
 
 def inference_cli() -> None:
-    print("INFERENCE CLI OK ✅ (next: implement batch inference)")
+    print("INFERENCE CLI OK  (next: implement batch inference)")
 

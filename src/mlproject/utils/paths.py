@@ -14,7 +14,6 @@ class ProjectPaths:
 
 
 def get_project_paths() -> ProjectPaths:
-    # src/mlproject/utils/paths.py -> repo root is 3 levels up
     root = Path(__file__).resolve().parents[3]
     return ProjectPaths(
         root=root,
